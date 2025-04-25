@@ -1,0 +1,59 @@
+1. What is Python?
+Python is a **high-level, interpreted programming language** that is easy to read and write. It's used to build all kinds of software — from websites and games to artificial intelligence and automation scripts.
+
+- Created by **Guido van Rossum** in the early 1990s.
+- Known for its **clean and readable syntax**.
+- Works on almost every operating system (Windows, macOS, Linux, etc.).
+
+
+/*
+Level	        Description	                                                Examples
+High-level	    Closer to human language, abstracted from hardware	        Python, Java, JavaScript
+Mid-level	    Mix of high and low-level features	                        C, C++
+Low-level	    Close to machine code, hardware-specific	                Assembly, Machine Code
+
+
+High-level languages are easy to read and write.
+Mid-level languages can interact with hardware (like pointers in C) but are still readable.
+Low-level languages are hard to read but give full control over the hardware.
+
+*/
+/*
+interpreted programming language : 
+- line by Line Execute.
+- given 1 by 1 error.
+
+Compiled programming language :
+- Execute fully file.
+- list out all errors.
+
+*/
+
+--------------------------------------------------------------------------------------
+2. Why Python?
+People choose Python because:
+
+- ✅ **Easy to learn** – Great for beginners and pros alike.
+- 🧠 **Powerful** – Used in AI, data science, web dev, automation, etc.
+- 📦 **Huge libraries** – Like `NumPy`, `Pandas`, `Django`, `TensorFlow`.
+- 🌐 **Big community** – Tons of support, tutorials, and open-source projects.
+- 🚀 **Fast development** – Less code, more work done.
+
+Basically, Python helps you build cool stuff quickly and efficiently.
+
+
+--------------------------------------------------------------------------------------
+3. Where is Python used?
+Python is everywhere. Literally. Here are some places:
+
+- 🧠 **Artificial Intelligence & Machine Learning** – Tools like TensorFlow, PyTorch.
+- 📊 **Data Science & Analytics** – Libraries like Pandas, Matplotlib.
+- 🌍 **Web Development** – Frameworks like Django, Flask.
+- 🤖 **Automation/Scripting** – Automate repetitive tasks easily.
+- 🎮 **Game Development** – Libraries like Pygame.
+- 🔬 **Scientific Computing** – Used in research and academia.
+- 💼 **Enterprise Applications** – Financial software, ERPs, etc.
+
+Companies like Google, Netflix, Instagram, and NASA use Python heavily.
+--------------------------------------------------------------------------------------
+Python Extension : '.py'
