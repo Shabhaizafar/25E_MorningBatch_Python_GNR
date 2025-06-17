@@ -9,7 +9,7 @@
 
 '''
 
-# 6. Write a Python function to check whether a number is an Armstrong number.
+# 6. Write a Python function to y whether a number is an Armstrong number.
 '''
 mynumber = 153
 add = 0

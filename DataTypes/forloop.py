@@ -20,3 +20,4 @@
 # for i in range(len(mytuple)-1,-1,-1):
 #     print(mytuple[i])
 
+n1 = input("Enter")   #  string
