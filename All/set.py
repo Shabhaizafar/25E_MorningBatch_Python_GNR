@@ -8,5 +8,29 @@
 19. Use set operations to identify students who play both cricket and football.
 20. Check if two sets have any elements in common (intersection check).
 
-
 '''
+
+# mylist =  [11,12,13,14,15,16,12,13,14]
+# myset = {''}
+
+# for i in mylist:
+#     myset.add(i)
+# else:
+#     myset.remove('')
+# print(myset)
+
+n = int(input("Number of Element"))
+myset = set()
+counter = 0
+for i in range (0,n): 
+    v = input("Value :")
+    if(ord(v[0])>=47 and ord(v[0])<=57):
+        myset.add(int(v))
+        counter = 1
+    else:
+        myset.add(v)
+
+if(counter):
+    print("Number Exist")
+else:
+    print("Number Doesn't Exist")
