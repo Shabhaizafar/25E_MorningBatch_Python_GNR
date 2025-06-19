@@ -8,3 +8,17 @@
 25. Convert a tuple of strings into a single string with commas.
 
 '''
+v1 = 11
+v2 = 12
+v3 = 13
+
+mytuple = (v1,v2,v3)
+print(mytuple)
+
+mylist = list(mytuple)
+temp = mylist[0]
+mylist[0] = mylist[-1]
+mylist[-1] = temp 
+
+mytuple = tuple(mylist)
+print(mytuple)

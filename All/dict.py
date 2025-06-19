@@ -9,3 +9,30 @@
 30. Track the frequency of characters in a string using a dictionary.
 
 '''
+
+# mydict = {
+#     "fname" : "Raj",
+#     "lname" : "shah"
+# }
+# mydict2 = {}
+
+
+# for i in mydict:
+#     mydict2.setdefault(mydict[i],i)
+
+# print(mydict2)
+
+
+
+# 30. Track the frequency of characters in a string using a dictionary.
+
+# mystr = "listen silent enlist inlets stone tones notes stone"
+# mylist = []
+# mydict = {}
+# for i in mystr:
+#     mylist.append(i)
+
+# for i in mylist:
+#     mydict.setdefault(i,tuple(mylist).count(i))
+
+# print(mydict)
