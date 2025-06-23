@@ -21,3 +21,9 @@
 #     print(mytuple[i])
 
 n1 = input("Enter")   #  string
+
+
+# for i in range(0,10):
+#     pass 
+# else :
+#     pass

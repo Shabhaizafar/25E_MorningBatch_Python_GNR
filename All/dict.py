@@ -1,6 +1,5 @@
 '''
-
-#### 📚 Dictionary
+ 📚 Dictionary
 
 26. Write a program to reverse the key-value pairs of a dictionary.
 27. Group a list of dictionaries by a common key.
