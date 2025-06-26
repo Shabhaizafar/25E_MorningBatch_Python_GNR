@@ -49,10 +49,6 @@ class child(parent):
 
 
 
-
-
-
-
 '''
 Employee Details
 Create a class Employee with details like name, id, and salary.
