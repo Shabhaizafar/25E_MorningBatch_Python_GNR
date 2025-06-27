@@ -91,44 +91,6 @@ class Child(Parent):
 
 
 
-'''
-
-### 🔹 4. **Hierarchical Inheritance**
-
-* Multiple child classes inherit from a single parent class.
-
-```python
-class Parent:
-    pass
-
-class Child1(Parent):
-    pass
-
-class Child2(Parent):
-    pass
-```
-
-'''
-
-'''
-
-### 🔹 5. **Hybrid Inheritance**
-
-* A combination of two or more types of inheritance (e.g., multiple + multilevel).
-
-```python
-class A:
-    pass
-
-class B(A):
-    pass
-
-class C:
-    pass
-
-class D(B, C):  # Combines multiple and multilevel
-    pass
-'''
 
 ######################################
 """
