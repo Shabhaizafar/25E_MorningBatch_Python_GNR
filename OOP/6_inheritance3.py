@@ -106,6 +106,10 @@ print(c1.companyname)
 
 ---
 
+
+
+
+
 **Hierarchical Inheritance – Question:**
 Create a Python program using hierarchical inheritance where a **base class `Vehicle`** is inherited by two subclasses: **`Car`** and **`Bike`**.
 Each subclass should have its own method to display specific information.
