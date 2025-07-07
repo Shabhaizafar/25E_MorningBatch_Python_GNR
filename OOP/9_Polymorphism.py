@@ -94,5 +94,5 @@ You are designing a drawing application. Create a polymorphic setup where differ
 
 You’re building a notification system that sends alerts through different channels like `Email`, `SMS`, and `PushNotification`. All notification classes have a method `send(message)`. How can you use polymorphism to write a function that sends the message regardless of the notification type?
 
-
 '''
+
