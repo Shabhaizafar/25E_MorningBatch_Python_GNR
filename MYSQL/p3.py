@@ -16,7 +16,9 @@ mycursor = mydb.cursor()     #  in SQL   : use dbname;
 # mydb.commit()
 
 # UPDATE 
-mycursor.execute('UPDATE EMPLOYEES SET EMP_NAME = "RAJAN" WHERE EMP_ID = 3')
+# mycursor.execute('UPDATE EMPLOYEES SET EMP_NAME = "RAJAN" WHERE EMP_ID = 3')
+mycursor.execute('UPDATE EMPLOYEES SET EMP_NAME = "RAJESH",EMP_ID = 4,SALARY=50000 WHERE EMP_ID = 2')
+
 mydb.commit()
 
 # READ 
@@ -24,8 +26,6 @@ mycursor.execute('SELECT * FROM EMPLOYEES')
 
 ALLDATA = mycursor.fetchall()
 print(ALLDATA)  # USE LOOP FOR PRINT SINGLE SINGLE ROWS
-
-
 
 
 mycursor.close()
