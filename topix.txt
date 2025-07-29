@@ -1,4 +1,1 @@
-Decorators
-Higher Order Function
-Context Managers 
-Type Hinting arg kwargs
+
