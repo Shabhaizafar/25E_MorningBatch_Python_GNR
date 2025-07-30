@@ -180,30 +180,81 @@ for i in range(0,len(mystr16)):
 
 > Focus: Custom functions, edge cases, and mini-project style logic
 
-21. **Find the first non-repeating character**
-    Input: `"aabbcdde"` → Output: `"c"`
-
 22. **Compress string (count repeating chars)**
     Input: `"aaabbc"` → Output: `"a3b2c1"`
 
 23. **Check if string is valid identifier (variable name)**
     Input: `"my_var"` → Output: `True`
 
-24. **Count total digits, letters, and special characters**
-    Input: `"Python123!@"` → Output: `Letters: 6, Digits: 3, Specials: 2`
 
-25. **Custom implementation of `startswith()` and `endswith()`**
 
 26. **Group all uppercase characters together**
     Input: `"HeLLoWorld"` → Output: `"HLLW"`
 
 27. **Check if string contains only digits (without `.isdigit()`)**
 
-28. **Remove all characters except alphabets and numbers**
-
-29. **Find all substrings of a string**
-    Input: `"abc"` → Output: `["a", "ab", "abc", "b", "bc", "c"]`
 
 30. **Implement a custom `strip()` (remove leading/trailing spaces)**
 
 '''
+
+# 21. **Find the first non-repeating character**
+#     Input: `"aabbcdde"` → Output: `"c"`
+"""
+mystr="aariyanr"
+for i in mystr:
+    count = 0
+    for j in mystr:
+        if i == j :
+            count+=1
+    if(count==1):
+        print(i)
+        break
+"""
+
+# 24. **Count total digits, letters, and special characters**
+#     Input: `"Python123!@"` → Output: `Letters: 6, Digits: 3, Specials: 2`
+"""
+mystr = "Python123!@"
+Letters = 0
+Digits = 0
+Specials = 0
+
+for i in mystr:
+    if((i>='A' and i<="Z") or (i>='a' and i<="z")):
+        Letters+=1
+    elif(i>="0" and i<="9"):
+        Digits+=1
+    else:
+        Specials+=1
+
+print(f"Number: {Digits}, Letters: {Letters} , Specials : {Specials}")
+"""
+# 29. **Find all substrings of a string**
+#     Input: `"abc"` → Output: `["a", "ab", "abc", "b", "bc", "c"]`
+"""
+mystr = "abc"
+
+for i in range(0,len(mystr)):
+    for j in range(0,len(mystr)+1):
+        if(mystr[i:j]):
+            print(mystr[i:j])
+"""
+# 25. **Custom implementation of `startswith()` and `endswith()`**
+
+"""
+mystr = input("Enter String : ")
+
+print(f"String Start with 'Z' : {mystr.startswith("Z")}")
+print(f"String End with 'r' : {mystr.endswith("r")}")
+"""
+
+
+# 28. **Remove all characters except alphabets and numbers**
+"""
+mystr = "zxcvbh@#$%^234ASD"
+for i in mystr:
+    if((i>='A' and i<="Z") or (i>='a' and i<="z") or (i>="0" and i<="9")):
+        print(i,end="")
+    
+"""
