@@ -101,16 +101,106 @@ print(flattern)
 
 > Focus: Deep logic, nested structures, higher-order operations
 
-1. **Group words by their length** from a given list.
-   *(e.g., `["cat", "dog", "apple", "bat"]` → `{3: ['cat', 'dog', 'bat'], 5: ['apple']}`)*
-2. Given a list of strings, **filter all palindromes**.
 3. **Implement a shopping cart** using a list where you can add, remove, view items.
-4. Given a matrix (nested list), **transpose the matrix**.
 5. Accept a sentence from user and **return list of unique words**.
-6. **Split a list into chunks** of size `n`. (e.g., `[1,2,3,4,5,6], n=2` → `[[1,2],[3,4],[5,6]]`)
 7. **Create a frequency dictionary** from a list.
    *(e.g., `[‘a’, ‘b’, ‘a’, ‘c’, ‘b’]` → `{'a': 2, 'b': 2, 'c': 1}`)*
 8. Create a list of student dictionaries and **sort them by marks**.
-9. Given a list of transactions with positive and negative integers, **separate credits and debits**.
 10. Create a program that accepts multiple sentences and **returns the top 5 most common words** using lists and logic.
 '''
+# 1. **Group words by their length** from a given list.
+#    *(e.g., `["cat", "dog", "apple", "bat"]` → `{3: ['cat', 'dog', 'bat'], 5: ['apple']}`)*
+"""
+mylist = ["cat", "dog", "apple", "bat"]
+mydict = {}
+print(mylist)
+for i in mylist:
+    if(len(i) in mydict.keys()):
+        temp = mydict.get(len(i))
+        temp.append(i)
+        mydict.setdefault(len(i),temp)
+    else : 
+        temp = []
+        temp.append(i)
+        mydict.setdefault(len(i),temp)
+
+
+print(mydict)
+"""
+# 2. Given a list of strings, **filter all palindromes**.
+'''
+mylist = ["madam","raj","naman",'ajay']
+print(list(filter(lambda x : "".join(list(reversed(x))) == x,mylist)))
+'''
+# 4. Given a matrix (nested list), **transpose the matrix**.
+# mylist = [
+#     [1,2,3],
+#     [4,5,6]
+# ]
+# myT = []
+# print(mylist[0],len(mylist[0])) # col   : 3
+# print(mylist,len(mylist))       # row   : 2
+"""
+for i in range(0,len(mylist[0])):
+    temp = []
+    for k in range(0,len(mylist)):
+        temp.append(0)
+    myT.append(temp)
+
+for i in range(0,len(mylist)):
+    for j in range(0,len(mylist[i])):
+        myT[j][i] = mylist[i][j]
+    
+for i in myT:
+    print(i)
+"""
+'''
+mylist = [
+    [1,4],
+    [2,5],
+    [3,6]
+]
+'''
+# print(mylist)
+
+# 6. **Split a list into chunks** of size `n`. (e.g., `[1,2,3,4,5,6], n=2` → `[[1,2],[3,4],[5,6]]`)
+"""
+import math
+
+mylist = [1,2,3,4,5,6]
+myT = []
+n = 4
+
+for i in range(0,math.ceil(len(mylist)/n)):
+    temp = []
+    for k in range(0,n):
+        temp.append(0)
+    myT.append(temp)
+
+k = 0
+l = 0
+for i in mylist:
+    if(l==n):
+        k+=1
+        l=0
+    myT[k][l] = i 
+    l+=1
+
+print(myT)
+"""
+# 9. Given a list of transactions with positive and negative integers, **separate credits and debits**.
+
+"""
+mylist = [1000,2000,-5000,-4000]
+positive = []
+negative = []
+
+for i in mylist:
+    if i < 0:
+        negative.append(i)
+    else:
+        positive.append(i)
+
+print(positive)
+print(negative)
+"""
