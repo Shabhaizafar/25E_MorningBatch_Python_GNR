@@ -123,4 +123,34 @@
 # print(max(mytuple,key= lambda x : x[1]))
 
 # 7. Write a function that accepts any tuple and **returns the tuple in reversed order** if it's numeric, else raise an error.
+
+# def reversedata(mytuple):
+#     if(type(mytuple[0])==type(1)):
+#         print(tuple(list(reversed(list(mytuple)))))
+#     else:
+#         print(TypeError)
+
+# reversedata(("R","A","J"))
+# reversedata((11,12,13))
+
 # 10. Create a **menu system using tuple** where each item is a tuple of (item_name, price), and allow user to calculate total bill.
+
+
+# allitems = []
+# while(1):
+#     print("1. For Add a New Item.")
+#     print("2. For calculate total bill.")
+#     print("3. For exit.")
+#     choice = int(input("Enter your Choice : "))
+#     match(choice):
+#         case 1 : 
+#                 mytuple = (input("Enter Product Name : "),int(input("Enter Price :")))
+#                 allitems.append(mytuple)
+
+#         case 2 :  
+#               totalbill = 0
+#               for i in allitems:
+#                     totalbill+=i[1]
+#               print("Total Bill :",totalbill)
+#               break
+#         case 3 : break
