@@ -141,16 +141,55 @@ def mergeDict(d1,d2):
 
 # checkPrime(20,100)
 # 7. Write a function that takes another function as a parameter and applies it to a list of numbers.
-def outerfu(mylist):
-    for i in mylist:
-        print(i)
+# def outerfu(mylist):
+#     for i in mylist:
+#         print(i)
 
-def main(myfu):
-    myfu([11,12,13,14])
+# def main(myfu):
+#     myfu([11,12,13,14])
 
 # main(outerfu)
 
 
 # 8. Write a function that implements the Tower of Hanoi problem.
 # 9. Write a function that calculates the GCD of two numbers using recursion.
+
+# 24  : 2,2,2,3
+# 20  : 2,2,5
+
+# def findGCD(a,b):                     # a = 50 , b = 20
+#     if(b == 0):            #20!=0                   # 4!=0
+#         print(a)
+#         return
+#     remainder = a % b     # r = 50 % 20  = 10       # r = 20 % 10  b = 0 
+#     a = b                 #  a=20                  # a = 4 
+#     b = remainder         #  b = 10                 # b = 0
+#     findGCD(a,b)
+    
+
+# findGCD(50,20) 
+
+
 # 10. Write a function that returns all palindromic substrings in a given string.
+
+mystr = "nadamad"
+
+def myFu(mystr):
+    for i in range(0,len(mystr)):
+        for j in range(i,len(mystr)):
+            if(len(mystr[i:j+1])>1):
+                if(mystr[i:j+1] == "".join(list(reversed(mystr[i:j+1])))):
+                    print(mystr[i:j+1])
+
+myFu(mystr)    
+
+
+
+
+
+
+
+
+
+
+
