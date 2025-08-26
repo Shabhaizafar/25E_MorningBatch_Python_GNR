@@ -172,16 +172,16 @@ def mergeDict(d1,d2):
 
 # 10. Write a function that returns all palindromic substrings in a given string.
 
-mystr = "nadamad"
+# mystr = "nadamad"
 
-def myFu(mystr):
-    for i in range(0,len(mystr)):
-        for j in range(i,len(mystr)):
-            if(len(mystr[i:j+1])>1):
-                if(mystr[i:j+1] == "".join(list(reversed(mystr[i:j+1])))):
-                    print(mystr[i:j+1])
+# def myFu(mystr):
+#     for i in range(0,len(mystr)):
+#         for j in range(i,len(mystr)):
+#             if(len(mystr[i:j+1])>1):
+#                 if(mystr[i:j+1] == "".join(list(reversed(mystr[i:j+1])))):
+#                     print(mystr[i:j+1])
 
-myFu(mystr)    
+# myFu(mystr)    
 
 
 
