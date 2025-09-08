@@ -122,6 +122,29 @@
 8. Create a class `Animal` with a method `sound()`. Derive `Dog` and `Cat` classes that override the sound method.
 
 """
+"""
+class Animal:
+    def __init__(self):
+        print("Animal !!!")
+    
+    def sound(self):
+        print("Animal Sounding ")
+
+
+class Dog(Animal):
+    def sound(self):
+        print("Bhauu Bhauu")
+    
+class Cat(Animal):
+    def sound(self):
+        print("Meaw Meaw!!")
+
+d1 = Dog()
+c1 = Cat()
+
+d1.sound()
+c1.sound()
+"""
 
 """
 
@@ -131,6 +154,35 @@
 10. Create classes `CreditCardPayment` and `UPIPayment` with a method `pay(amount)`. Show polymorphism by using the same method for different payment types.
 
 """
+# class PaymentMethod:
+#     def __init__(self):
+#         self.cardpin = 1234
+#         self.upipin = 5678
+
+#     def pay(self,amount):
+#         print("Cash Pay!!",amount)
+
+# class CreditCardPayment(PaymentMethod):
+#     def pay(self,amount):
+#         if(int(input("Enter the cardpin : ")) == self.cardpin):
+#              print("Payment Successfull using card")
+#         else:
+#              print("Payment fail")
+
+# class UPIPayment(PaymentMethod):
+#     def pay(self,amount):
+#         if(int(input("Enter the upipin : ")) == self.upipin):
+#              print("Payment Successful using upi")
+#         else:
+#              print("Payment fail")
+
+
+# p1 = CreditCardPayment()
+# p2 = UPIPayment()
+
+# p1.pay(3000)
+# p2.pay(2000)
+
 
 """
 
@@ -140,6 +192,36 @@
 12. Create an abstract class `Vehicle` with an abstract method `start_engine()`. Implement `Car` and `Bike`.
 
 """
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def start_engine(self):
+        print("Engine Started !!")
+
+
+
+class Car(Vehicle):
+    @abstractmethod
+    def start_engine(self):
+        None
+
+class Bike(Vehicle):
+    pass
+
+
+# c1 = Car()
+# b1 = Bike()    
+
+# c1.start_engine()
+# b1.start_engine()
+
+v1 = Vehicle()
+
+v1.start_engine()
 
 """
 
