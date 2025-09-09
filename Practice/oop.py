@@ -192,25 +192,25 @@ c1.sound()
 12. Create an abstract class `Vehicle` with an abstract method `start_engine()`. Implement `Car` and `Bike`.
 
 """
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Vehicle(ABC):
-    def __init__(self):
-        pass
+# class Vehicle(ABC):
+#     def __init__(self):
+#         pass
 
-    @abstractmethod
-    def start_engine(self):
-        print("Engine Started !!")
+#     @abstractmethod
+#     def start_engine(self):
+#         print("Engine Started !!")
 
 
 
-class Car(Vehicle):
-    @abstractmethod
-    def start_engine(self):
-        None
+# class Car(Vehicle):
+#     @abstractmethod
+#     def start_engine(self):
+#         None
 
-class Bike(Vehicle):
-    pass
+# class Bike(Vehicle):
+#     pass
 
 
 # c1 = Car()
@@ -219,9 +219,9 @@ class Bike(Vehicle):
 # c1.start_engine()
 # b1.start_engine()
 
-v1 = Vehicle()
+# v1 = Vehicle()
 
-v1.start_engine()
+# v1.start_engine()
 
 """
 
@@ -231,6 +231,23 @@ v1.start_engine()
 14. Create a class `MathUtils` with a static method `is_prime(n)` that checks if a number is prime.
 
 """
+# class MathUtils:
+    
+#     @staticmethod 
+#     def is_prime(n):
+#         count = 0
+#         for i in range(1,n):
+#             if(n%i == 0):
+#                 count+=1
+#         if count == 1 : 
+#             print(f"{n} is Prime") 
+#         else :
+#             print(f"{n} is not a Prime") 
+
+
+
+
+# MathUtils.is_prime(47)
 
 """
 
@@ -240,14 +257,91 @@ v1.start_engine()
 16. Create a class `Vector` and overload the `*` operator for dot product.
 
 """
+# class ComplexNumber:
+#     def add(n1,n2):
+#         print(type(n1+n2))
 
+
+# ComplexNumber.add(12+2j,13+3j)
 """
 
 9.Real-Life Case Studies
 
 17. Create a class `ShoppingCart` where you can add items (name, price, qty) and calculate total bill.
-18. Create a class `Library` with methods to `add_book`, `remove_book`, and `display_books`.
 19. Create a class `ATM` that simulates ATM transactions like deposit, withdraw, and balance check.
-20. Create a class `OnlineCourse` with attributes `title`, `instructor`, and `price`. Add a method to apply a discount.
+
+18. Create a class `Library` with methods to `add_book`, `remove_book`, and `display_books`.
+
 
 """
+
+# class Library:
+#     def __init__(self,libraryname):
+#         self.libraryname = libraryname
+#         self.books = []
+        
+
+#     def add_book(self,book):
+#         if book not in self.books:
+#             self.books.append(book)
+#             print("Book Added !!")
+#         else:
+#             print("Book Already Exist !!")
+
+#     def remove_book(self,book):
+#         if book in self.books:
+#             self.books.remove(book)
+#             print("Book removed !!")
+#         else:
+#             print("Book doesn't Exist !!")
+
+#     def display_books(self):
+#         print(self.books)
+
+
+
+# l1 = Library("MJO")
+
+# l1.add_book("Book1")
+# l1.add_book("Book2")
+# l1.add_book("Book1")
+
+
+# l1.add_book("Book3")
+# l1.add_book("Book4")
+# l1.add_book("Book5")
+
+# l1.remove_book("Book2")
+
+
+# l1.display_books()
+
+
+# 20. Create a class `OnlineCourse` with attributes `title`, `instructor`, and `price`. Add a method to apply a discount.
+
+
+class OnlineCourse:
+    def __init__(self,title,instructor,price):
+        self.title = title
+        self.instructor = instructor
+        self.price = price
+
+    def display(self):
+        print(f"title : {self.title} instructor : {self.instructor} price : {self.price}")
+
+    def discount(self):
+        self.price -= self.price * 0.1
+
+
+o1 = OnlineCourse("C","Rajesh",5000)
+
+
+o1.display()
+o1.discount()
+o1.display()
+
+
+
+
+
+
