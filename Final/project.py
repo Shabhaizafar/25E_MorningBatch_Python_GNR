@@ -1,7 +1,10 @@
 import sqlite3 
+import random
+
 
 mydb = sqlite3.connect("BankManagement.db") 
 mycursor = mydb.cursor()
+
 
 mycursor.execute("""
 CREATE TABLE IF NOT EXISTS ACCOUNT (
@@ -19,7 +22,20 @@ print("\t\t\t\t--------------------------")
 print("Welcome to Our Bank !!")
 choice = int(input("How can i Help you ?\n1. New Account\n2. Coming Soon\n3.Update Details\n4.Deactivate Account\n\nchoice your Topic : "))
 match choice:
-    case 1 :    print("Account Created !!")
+    case 1 :    
+        account_no = int(random.random()*100000000000)
+        account_holder = input("Enter Your Full Name :")
+        balance = int(input("Add Amount : "))
+        mycursor.execute('INSERT INTO ACCOUNT VALUES (?,?,?)',(account_no,account_holder,balance))
+        mydb.commit()
+        print("Successfully Added !!!")
     case 2 :    print("Coming Soon !!")
     case 3 :    print("Update Details !!")
     case 4 :    print("Deactivate")
+
+
+
+# mycursor.execute('SELECT * FROM ACCOUNT')
+# ALLDATA = mycursor.fetchall()
+
+# print(ALLDATA)
