@@ -30,12 +30,43 @@ match choice:
         mydb.commit()
         print("Successfully Added !!!")
     case 2 :    print("Coming Soon !!")
-    case 3 :    print("Update Details !!")
-    case 4 :    print("Deactivate")
+    case 3 :    
+        account_holder = input("Enter Your Name : ")
+        mycursor.execute("SELECT account_no FROM ACCOUNT WHERE account_holder = '{0}'".format(account_holder))
+        data = mycursor.fetchone()
+        if(data != None):
+            account_no = data[0]
+            account_holder = input("Update Name Here :")
+            balance = int(input("Update Balance here : "))
+            mycursor.execute("UPDATE ACCOUNT SET account_holder = '{0}',balance = {1} WHERE account_no = {2}".format(account_holder,balance,account_no))
+            mydb.commit()
+            print("Updated  Successfully !!")
+        else:
+            print("Account Doesn't Exist")
 
+    case 4 :    
+        account_holder = input("Enter Your Name : ")
+        mycursor.execute("SELECT account_no FROM ACCOUNT WHERE account_holder = '{0}'".format(account_holder))
+        data = mycursor.fetchone()
+        if(data != None):
+            if(input("Do you want to deactivate Your Account(yes)/(no) ?")=="yes"):
+                account_no = data[0]
+                mycursor.execute('DELETE FROM ACCOUNT WHERE account_no = {0}'.format(account_no))
+                mydb.commit()
+                print("Deactivate Successfully !!")
+            else:
+                print("Operation Cancelled !!!")
+        else:
+            print("Account Doesn't Exist")
 
 
 # mycursor.execute('SELECT * FROM ACCOUNT')
 # ALLDATA = mycursor.fetchall()
 
 # print(ALLDATA)
+
+
+# mycursor.execute("SELECT account_no FROM ACCOUNT WHERE account_holder = 'Raj RakeshBhai Shah'")
+
+# data = mycursor.fetchone()
+# print(data[0])
